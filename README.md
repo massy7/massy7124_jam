@@ -1,6 +1,6 @@
 # massy7124_jam
 
-> massy7124&#39;s jamstack site
+> massy7124 portfolio site
 
 ## Build Setup
 

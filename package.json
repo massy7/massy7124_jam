@@ -1,7 +1,7 @@
 {
   "name": "massy7124_jam",
   "version": "1.0.0",
-  "description": "massy7124&#39;s jamstack site",
+  "description": "My spectacular Nuxt.js project",
   "author": "massy7",
   "private": true,
   "scripts": {
@@ -13,19 +13,22 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "babel-runtime": "^6.26.0",
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
-    "vuetify": "^1.2.4",
-    "@nuxtjs/axios": "^5.0.0"
+    "vue-markdown": "^2.2.4",
+    "vue-scrollto": "^2.15.0",
+    "vuetify": "^1.2.4"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
     "babel-eslint": "^8.2.1",
     "eslint": "^5.0.1",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0",
     "eslint-config-prettier": "^3.1.0",
+    "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-vue": "^4.0.0",
+    "nodemon": "^1.11.0",
     "prettier": "1.14.3",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
