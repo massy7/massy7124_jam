@@ -1,4 +1,13 @@
-const pkg = require('./package')
+const config = require('./config/production.json')
+const { getConfigForKeys } = require('./config/config.js')
+const { createClient } = require('./plugins/contentful')
+
+const ctfConfig = getConfigForKeys([
+  'CTF_BLOG_POST_TYPE_ID',
+  'CTF_SPACE_ID',
+  'CTF_CDA_ACCESS_TOKEN'
+])
+const cdaClient = createClient(ctfConfig)
 
 module.exports = {
   mode: 'spa',
@@ -7,11 +16,32 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: "Massy7124's Web Site",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Massy7124のポートフォリオサイトです。ブログも書いていますのでご覧ください！'
+      },
+      { name: 'twitter:site', content: 'summary' },
+      { name: 'twitter:card', content: '@massy7124' },
+      {
+        name: 'twitter:description',
+        content: 'Massy7124のポートフォリオサイトです。'
+      },
+      { name: 'twitter:image:src', content: '' },
+      { property: 'og:url', content: config.server.baseUrl },
+      { property: 'og:title', content: "massy7124's site" },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:description', content: "massy7124's portfolio site" },
+      {
+        property: 'og:image',
+        content: 'http://massy7124.me/img/massy7124.jpg'
+      },
+      { property: 'fb:admins', content: '100010745989607' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -35,15 +65,16 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['@/plugins/vuetify', '~plugins/string-limit'],
+  plugins: [
+    '@/plugins/vuetify',
+    '~plugins/string-limit',
+    '~plugins/contentful'
+  ],
 
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
-  ],
+  modules: ['@nuxtjs/axios'],
   /*
   ** Axios module configuration
   */
@@ -69,5 +100,25 @@ module.exports = {
         })
       }
     }
+  },
+
+  generate: {
+    routes() {
+      return cdaClient
+        .getEntries({
+          content_type: ctfConfig.CTF_BLOG_POST_TYPE_ID
+        })
+        .then(entries => {
+          return [
+            ...entries.items.map(entry => `/blog/content/${entry.fields.slug}`)
+          ]
+        })
+    }
+  },
+
+  env: {
+    CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
+    CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
   }
 }

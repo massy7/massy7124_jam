@@ -46,6 +46,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+#header
+  position relative
+  z-index 9999
+
 .header-sm-and-up
   padding 24px 0px 0px 0px
   text-align center

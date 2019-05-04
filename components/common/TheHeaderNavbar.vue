@@ -28,7 +28,7 @@
 
       <nuxt-link 
         class="button" 
-        to="/blog/1"
+        to="/blog"
       >
         <v-icon>edit</v-icon>Blog
       </nuxt-link>

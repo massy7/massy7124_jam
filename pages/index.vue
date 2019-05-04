@@ -21,8 +21,7 @@
           益子滉輝と申します。<br>
           木更津高専に在学中にC言語などを学び、独学でPHP、JavaScript、HTMLを学びました。<br>
           現在はWeb Developerとしてフロントエンド、サーバーサイドともに設計・実装を行っています。<br>
-          PHP、JavaScriptをよく使用しており、SPAやPWAを勉強中。<br>
-          今後は学習した内容を発表できるような自信をつけたいと思っています。
+          PHP、JavaScriptをよく使用しており、SPAやPWAに興味あり。
         </div>
       </div>
     </section>
@@ -206,6 +205,28 @@
               class="bland-logo"
               src="/img/logo/docker.svg"
               alt="Docker">
+          </a>
+        </div>
+        <div class="">
+          <a 
+            href="https://www.contentful.com/"
+            title="Contentful"
+            target="_blank">
+            <img 
+              class="bland-logo"
+              src="/img/logo/contentful.svg"
+              alt="Contentful">
+          </a>
+        </div>
+        <div class="">
+          <a 
+            href="https://www.netlify.com/"
+            title="Netlify"
+            target="_blank">
+            <img 
+              class="bland-logo"
+              src="/img/logo/netlify.svg"
+              alt="Netlify">
           </a>
         </div>
         <div class="">

@@ -1,36 +1,22 @@
 <template>
-  <v-card
-    :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
-    class="frame"
-  >
+  <v-card class="frame card-mini mb-16">
     <div class="frame-inner">
-      <v-img
-        :src="imageUrl !== null ? imageUrl : '/img/noimage.png'"
-        aspect-ratio="1.77"
-      />
-
-      <v-card-title primary-title>
+      <v-card-title
+        primary-title
+        class="padding-8"
+      >
         <div>
-          <h3 class="headline mb-0">{{ title }}</h3>
+          <h3 class="mb-0">{{ title | stringLimit(10, '...') }}</h3>
 
           <chip-technology
-            v-for="(chip, index) in chips"
-            :key="index"
-            :src="chip.imageUrl !== null ? chip.imageUrl : '/img/noimage.png'"
-            :alt="chip.imageAlt"
+            v-if="chips.length !== 0"
+            :src="chips[0].imageUrl !== null ? chips[0].imageUrl : '/img/noimage.png'"
+            :alt="chips[0].imageAlt"
           >
-            {{ chip.name }}
+            {{ chips[0].name }}
           </chip-technology>
-
-          <div>
-            {{ description | stringLimit(100, '...') }}
-          </div>
         </div>
       </v-card-title>
-
-      <v-card-text class="pt-0 pb-0 text-xs-right">
-        {{ date.replace('T', ' ' ) }}
-      </v-card-text>
     </div>
   </v-card>
 </template>
@@ -39,7 +25,7 @@
 import ChipTechnology from '~/components/ChipTechnology.vue'
 
 export default {
-  name: 'BlogCard',
+  name: 'BlogCardMini',
   components: {
     ChipTechnology
   },

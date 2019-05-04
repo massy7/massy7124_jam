@@ -1,8 +1,14 @@
 <template>
-  <div 
-    v-if="isButtonEnable" 
-    class="return-top el-icon-caret-top" 
-    @click="scrollTop('#header', 500, options)"/>
+  <v-btn
+    v-if="isButtonEnable"
+    fab
+    small
+    color="deepskyblue"
+    class="return-top"
+    @click="scrollTop('#header', 500, options)"
+  >
+    <v-icon dark>keyboard_arrow_up</v-icon>
+  </v-btn>
 </template>
 
 <script>
@@ -40,7 +46,7 @@ export default {
 <style lang="stylus" scoped>
 .return-top
   position fixed
-  bottom 80px
+  bottom 64px
   right 20px
   z-index 100
 

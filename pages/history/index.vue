@@ -49,10 +49,10 @@
                 </a>
                 開発チーム<br>
                 <chip-technology
-                  src="/img/logo/nuxt.svg"
-                  alt="Nuxt.js"
+                  src="/img/logo/vue.svg"
+                  alt="Vue.js"
                 >
-                  Nuxt.js
+                  Vue.js
                 </chip-technology>
                 <chip-technology
                   src="/img/logo/laravel-color.svg"
