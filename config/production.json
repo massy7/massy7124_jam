@@ -3,21 +3,6 @@
         "baseUrl": "http://massy7124.me",
         "port": 80
     },
-
-    "db": {
-        "host": "localhost",
-        "user": "dbuser",
-        "password": "dbpassword",
-        "database": "dbname",
-        "timezone": "utc",
-        "dateStrings": "date"
-    },
-
-    "mongodb": {
-        "dsn": "mongodb://0.0.0.0:27017/",
-        "database": "portfolio"
-    },
-
     "google": {
         "analytics": {
             "trackingId": "UA-116928524-1"

@@ -80,5 +80,4 @@ dist
 # IDE
 .idea
 
-# dotenv
-.env
+sw.*

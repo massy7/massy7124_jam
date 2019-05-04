@@ -51,6 +51,23 @@ module.exports = {
       }
     ]
   },
+  'google-analytics': {
+    id: config.google.analytics.trackingId
+  },
+  manifest: {
+    name: "Massy7124's site",
+    short_name: 'Massy7124',
+    title: "Massy7124's site",
+    'og:title': "Massy7124's site",
+    description: "Massy7124's site",
+    'og:description': "Massy7124's site",
+    lang: 'ja',
+    theme_color: 'deepskyblue',
+    background_color: 'deepskyblue'
+  },
+  workbox: {
+    dev: true
+  },
 
   /*
   ** Customize the progress-bar color
@@ -74,7 +91,7 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
   /*
   ** Axios module configuration
   */
