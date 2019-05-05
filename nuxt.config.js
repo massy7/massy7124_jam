@@ -126,9 +126,7 @@ module.exports = {
           content_type: ctfConfig.CTF_BLOG_POST_TYPE_ID
         })
         .then(entries => {
-          return [
-            ...entries.items.map(entry => `/blog/content/${entry.fields.slug}`)
-          ]
+          return [...entries.items.map(entry => `/blog/${entry.fields.id}`)]
         })
     }
   },
