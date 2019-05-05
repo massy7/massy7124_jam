@@ -120,6 +120,7 @@ module.exports = {
   },
 
   generate: {
+    fallback: true,
     routes() {
       return cdaClient
         .getEntries({
