@@ -6,74 +6,95 @@
       <div class="grid grid-logo center">
         <div class="">
           <a 
-            href="https://twitter.com/massy7124" 
-            title="Twitter" 
-            target="_blank">
+            href="https://twitter.com/massy7124"
+            title="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
-              class="bland-logo" 
-              src="/img/logo/twitter.svg" 
+              class="bland-logo"
+              src="/img/logo/twitter.svg"
               alt="Twitter">
           </a>
         </div>
         <div class="">
           <a 
-            href="https://www.facebook.com/massy7124" 
-            title="Facebook" 
-            target="_blank">
+            href="https://www.facebook.com/massy7124"
+            title="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
-              class="bland-logo" 
-              src="/img/logo/facebook.svg" 
-              alt="Facebook" 
+              class="bland-logo"
+              src="/img/logo/facebook.svg"
+              alt="Facebook"
               style="width:70%;">
           </a>
         </div>
         <div class="">
           <a 
-            href="https://www.instagram.com/massy7124" 
-            title="Instagram" 
-            target="_blank">
+            href="https://www.instagram.com/massy7124"
+            title="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
-              class="bland-logo" 
-              src="/img/logo/instagram.svg" 
+              class="bland-logo"
+              src="/img/logo/instagram.svg"
               alt="Instagram">
           </a>
         </div>
-        <!-- <div class="">
-                    <a href="https://github.com/massy7" title="GitHub" target="_blank">
-                        <img class="bland-logo" src="/img/logo/github.svg" alt="GitHub" style="width:70%;">
-                    </a>
-                </div> -->
+        <div class="">
+          <a
+            href="https://github.com/massy7"
+            title="GitHub"
+            target="_blank"
+          >
+            <img
+              class="bland-logo"
+              src="/img/logo/github.svg"
+              alt="GitHub"
+              style="width:70%;"
+            >
+          </a>
+        </div>
         <div class="">
           <a 
-            href="https://ask.fm/massy7124" 
-            title="Ask.fm" 
-            target="_blank">
+            href="https://ask.fm/massy7124"
+            title="Ask.fm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
-              class="bland-logo" 
-              src="/img/logo/askfm.svg" 
+              class="bland-logo"
+              src="/img/logo/askfm.svg"
               alt="Ask.fm">
           </a>
         </div>
         <div class="">
           <a 
-            href="https://peing.net/ja/massy7124" 
-            title="Peing" 
-            target="_blank">
+            href="https://peing.net/ja/massy7124"
+            title="Peing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
-              class="bland-logo" 
-              src="/img/logo/peing.svg" 
+              class="bland-logo"
+              src="/img/logo/peing.svg"
               alt="Peing">
           </a>
         </div>
         <div class="">
           <a 
-            href="https://www.wantedly.com/users/18012899" 
-            title="Wantedly" 
-            target="_blank">
+            href="https://www.wantedly.com/users/18012899"
+            title="Wantedly"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
-              class="bland-logo" 
-              src="/img/logo/wantedly.svg" 
-              alt="Wantedly" 
+              class="bland-logo"
+              src="/img/logo/wantedly.svg"
+              alt="Wantedly"
               style="width:70%;">
           </a>
         </div>
@@ -81,15 +102,18 @@
     </section>
 
     <section>
-      <h1>Form</h1>
+      <h1>Mail</h1>
 
-      <div class="center">
-        <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfMaxwA9ETS1pvwDSivvW5pTD_DuYbePh-VJ8UYWF6xGbcHPA/viewform?embedded=true" 
-          style="width: 80vw; max-width: 660px; height: 860px;" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0">読み込んでいます...</iframe>
+      <div class="grid grid-logo center">
+        <div class="">
+          <img
+            class="bland-logo"
+            src="/img/logo/google-gmail.svg"
+            alt="Gmail"
+            style="width:70%;"
+            @click="createNewGmail"
+          >
+        </div>
       </div>
     </section>
   </article>
@@ -120,8 +144,11 @@ export default {
         position: 'bottom-right'
       })
     },
-    submitForm(formName) {
-      console.log('submit')
+    createNewGmail() {
+      window.open(
+        'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=koki.mashiko.1995@gmail.com',
+        '_blank'
+      )
     }
   },
   transition(to, from) {

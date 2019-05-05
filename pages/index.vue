@@ -35,7 +35,9 @@
           <a 
             href="https://ja.nuxtjs.org/"
             title="Nuxt.js"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/nuxt.svg"
@@ -46,7 +48,9 @@
           <a 
             href="https://jp.vuejs.org/"
             title="Vue.js"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/vue.svg"
@@ -57,7 +61,9 @@
           <a 
             href="http://expressjs.com/"
             title="Express"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/express.svg"
@@ -68,7 +74,9 @@
           <a 
             href="https://nodejs.org/ja/"
             title="Node.js"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/nodejs-color.svg"
@@ -79,7 +87,9 @@
           <a 
             href="https://webpack.js.org/"
             title="webpack"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/webpack.svg"
@@ -90,7 +100,9 @@
           <a 
             href="https://nginx.org/"
             title="nginx"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/nginx.svg"
@@ -101,7 +113,9 @@
           <a 
             href="https://laravel.com/"
             title="Laravel5"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/laravel-color.svg"
@@ -112,7 +126,9 @@
           <a 
             href="https://cakephp.org/"
             title="CakePHP3"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/cakephp.svg"
@@ -123,7 +139,9 @@
           <a 
             href="http://www.php.net/"
             title="PHP"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/php-color.svg"
@@ -134,7 +152,9 @@
           <a 
             href="https://html.spec.whatwg.org/multipage/"
             title="HTML5"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/html5-color.svg"
@@ -145,7 +165,9 @@
           <a 
             href="https://www.w3.org/Style/CSS/"
             title="CSS3"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/css3-color.svg"
@@ -156,7 +178,9 @@
           <a 
             href="https://www.ecma-international.org/"
             title="ES6"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/es6.svg"
@@ -167,7 +191,9 @@
           <a 
             href="https://jquery.com/"
             title="jQuery"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/jquery.svg"
@@ -178,7 +204,9 @@
           <a 
             href="https://isocpp.org/"
             title="C++"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/cpp.svg"
@@ -189,7 +217,9 @@
           <a 
             href="https://github.com/"
             title="GitHub"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/github.svg"
@@ -200,7 +230,9 @@
           <a 
             href="https://www.docker.com/"
             title="Docker"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/docker.svg"
@@ -211,7 +243,9 @@
           <a 
             href="https://www.contentful.com/"
             title="Contentful"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/contentful.svg"
@@ -222,7 +256,9 @@
           <a 
             href="https://www.netlify.com/"
             title="Netlify"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/netlify.svg"
@@ -233,7 +269,9 @@
           <a 
             href="https://www.mongodb.com/"
             title="MongoDB"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/mongodb.svg"
@@ -244,7 +282,9 @@
           <a 
             href="https://www.mysql.com/"
             title="MySQL"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/mysql-logo.svg"
@@ -255,7 +295,9 @@
           <a 
             href="https://aws.amazon.com/ec2/"
             title="Amazon EC2"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/amazon-ec2.svg"
@@ -266,7 +308,9 @@
           <a 
             href="https://code.visualstudio.com/"
             title="Visual Studio Code"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/visual-studio-code.svg"
@@ -277,7 +321,9 @@
           <a 
             href="https://atom.io/"
             title="Atom"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img 
               class="bland-logo"
               src="/img/logo/atom-editor.svg"
