@@ -121,18 +121,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      form: {
-        account: '',
-        content: ''
-      },
-      rules: {
-        account: [{ required: true, message: '必須項目', trigger: 'blur' }],
-        content: [{ required: true, message: '必須項目', trigger: 'blur' }]
-      }
-    }
-  },
   methods: {
     copyToClipboard() {
       const email = document.querySelector('#email-address')

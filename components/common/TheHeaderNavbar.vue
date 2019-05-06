@@ -102,4 +102,9 @@ nav
     top 0px
     // left 0
     z-index 100
+
+.v-icon
+    position relative
+    top 4px
+    vertical-align unset
 </style>
