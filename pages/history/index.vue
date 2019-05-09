@@ -60,6 +60,18 @@
                 >
                   Laravel5
                 </chip-technology>
+                <chip-technology
+                  src="/img/logo/google-cloud.svg"
+                  alt="GCP"
+                >
+                  GCP
+                </chip-technology>
+                <chip-technology
+                  src="/img/logo/google-bigquery.svg"
+                  alt="Google BigQuery"
+                >
+                  BigQuery
+                </chip-technology>
               </div>
             </div>
           </v-timeline-item>
@@ -115,6 +127,12 @@
                 >
                   Laravel5
                 </chip-technology>
+                <chip-technology
+                  src="/img/logo/amazon-ec2.svg"
+                  alt="Amazon EC2"
+                >
+                  EC2
+                </chip-technology>
               </div>
             </div>
           </v-timeline-item>
@@ -165,6 +183,54 @@
                   alt="Laravel5"
                 >
                   Laravel5
+                </chip-technology>
+                <chip-technology
+                  src="/img/logo/amazon-ec2.svg"
+                  alt="Amazon EC2"
+                >
+                  EC2
+                </chip-technology>
+              </div>
+            </div>
+          </v-timeline-item>
+
+          <v-timeline-item
+            key="4"
+            :data-index="4"
+            color="#01418E"
+            small
+          >
+            <template v-slot:opposite>
+              <span class="headline font-weight-bold color-knct">
+                2010-04 ~ 2017-03
+              </span>
+            </template>
+
+            <div class="py-3">
+              <div
+                v-if="$vuetify.breakpoint.xs"
+                class="font-weight-bold color-knct"
+              >
+                2010-04 ~ 2017-03
+              </div>
+
+              <h2 class="headline font-weight-light mb-3 color-knct">
+                <a
+                  href="http://www.kisarazu.ac.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="color-knct"
+                >木更津工業高等専門学校</a>
+              </h2>
+
+              <div>
+                情報工学科: 2010-04 ~ 2015-03<br>
+                制御・情報システム工学専攻科: 2015-04 ~ 2017-03<br>
+                <chip-technology
+                  src="/img/logo/nit-kc.svg"
+                  alt="NIT,KC"
+                >
+                  NIT,KC
                 </chip-technology>
               </div>
             </div>

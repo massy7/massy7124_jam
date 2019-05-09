@@ -6,7 +6,7 @@
       class="header-sm-and-up bg-color-main"
     >
       <h1>Massy7124</h1>
-      <h2>Web Developer</h2>
+      <h2>Software Engineer</h2>
       <the-header-navbar :is-fixed-top="isFixedTop"/>
     </header>
 
@@ -14,7 +14,7 @@
       v-else
       class="header-xs bg-color-main">
       <h1>Massy7124</h1>
-      <h2>Web Developer</h2>
+      <h2>Software Engineer</h2>
     </header>
   </div>
 </template>

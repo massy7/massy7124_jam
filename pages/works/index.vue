@@ -21,6 +21,57 @@
           >
             <div class="frame-inner">
               <v-img
+                src="/img/massy7124.jpg"
+                aspect-ratio="1.77"
+                contain
+              />
+
+              <v-card-title primary-title>
+                <div>
+                  <h3 class="headline mb-0">Massy7124's Portfolio</h3>
+
+                  <chip-technology
+                    src="/img/logo/nuxt.svg"
+                    alt="Nuxt.js"
+                  >
+                    Nuxt.js
+                  </chip-technology>
+                  <chip-technology
+                    src="/img/logo/netlify.svg"
+                    alt="Netlify"
+                  >
+                    Netlify
+                  </chip-technology>
+                  <chip-technology
+                    src="/img/logo/contentful.svg"
+                    alt="Contentful"
+                  >
+                    Contentful
+                  </chip-technology>
+
+                  <div>
+                    こちらのサイトは、Nuxt.js (Front)、Netlify (Server)、Contentful(CMS)、で構成されています。<br>
+                    Contentfulは<nuxt-link :to="{ name: 'blog' }"><span class="color-main">Blog</span></nuxt-link>で活用しています。
+                  </div>
+                </div>
+              </v-card-title>
+            </div>
+          </v-card>
+        </v-flex>
+
+        <v-flex
+          key="2"
+          data-index="2"
+          class="padding-8"
+          xs12
+          sm6
+        >
+          <v-card
+            :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
+            class="frame"
+          >
+            <div class="frame-inner">
+              <v-img
                 src="/img/resimage-site.png"
                 aspect-ratio="1.77"
               />
@@ -59,8 +110,8 @@
         </v-flex>
 
         <v-flex
-          key="2"
-          data-index="2"
+          key="3"
+          data-index="3"
           class="padding-8"
           xs12
           sm6

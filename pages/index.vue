@@ -20,8 +20,13 @@
         <div class="detail">
           益子滉輝と申します。<br>
           木更津高専に在学中にC言語などを学び、独学でPHP、JavaScript、HTMLを学びました。<br>
-          現在はWeb Developerとしてフロントエンド、サーバーサイドともに設計・実装を行っています。<br>
+          現在はWebを主としてフロントエンド、サーバーサイドともに設計・実装を行っています。<br>
           PHP、JavaScriptをよく使用しており、SPAやPWAに興味あり。
+        </div>
+
+        <div class="love-hate">
+          <h1>Like</h1>
+          Tesla / Sweets / Board Game / Hat
         </div>
       </div>
     </section>
@@ -293,6 +298,19 @@
         </div>
         <div class="">
           <a 
+            href="https://console.cloud.google.com/?hl=ja"
+            title="Google Cloud Platform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              class="bland-logo"
+              src="/img/logo/google-cloud.svg"
+              alt="Google Cloud Platform">
+          </a>
+        </div>
+        <div class="">
+          <a 
             href="https://aws.amazon.com/ec2/"
             title="Amazon EC2"
             target="_blank"
@@ -351,11 +369,12 @@ export default {
 
 <style lang="stylus" scoped>
 .grid-profile
-  grid-template-rows 1fr 4fr
+  grid-template-rows 48px 1fr 1fr
   grid-template-columns 1fr 3fr
   grid-template-areas \
-    'profile-image name' \
-    'profile-image detail'
+    'name name' \
+    'profile-image detail' \
+    'profile-image love-hate' \
 
   .profile-image
     grid-area profile-image
@@ -366,15 +385,20 @@ export default {
 
   .detail
     grid-area detail
+    // font-size 16px
+
+  .love-hate
+    grid-area love-hate
 
 @media (max-width 767px)
   .grid-profile
-    grid-template-rows 120px 40px 1fr
+    grid-template-rows 120px 40px 1fr 40px
     grid-template-columns 1fr
     grid-template-areas \
       'profile-image' \
       'name' \
-      'detail'
+      'detail' \
+      'love-hate'
 
   .profile-image
     max-width 120px
