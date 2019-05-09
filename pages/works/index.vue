@@ -115,6 +115,7 @@
           class="padding-8"
           xs12
           sm6
+          offset-sm3
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"

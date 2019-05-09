@@ -12,6 +12,8 @@
           v-for="(blog, index) in blogs"
           :key="blog.id"
           :data-index="index"
+          :offset-sm2="blogs.length % 3 == 2 && (blogs.length - 2) == index"
+          :offset-sm4="blogs.length % 3 == 1 && (blogs.length - 1) == index"
           class="padding-8"
           xs12
           sm4
