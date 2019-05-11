@@ -67,6 +67,7 @@
 import BlogCardMini from '~/components/BlogCardMini.vue'
 import ChipTechnology from '~/components/ChipTechnology.vue'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import hljs from 'highlight.js'
 
 const config = require('../../config/production.json')
 
@@ -95,6 +96,12 @@ export default {
       return
     }
     await store.dispatch('blogs/fetchBlogs')
+  },
+  mounted() {
+    let targets = this.$el.querySelectorAll('code')
+    targets.forEach(target => {
+      hljs.highlightBlock(target)
+    })
   },
   methods: {
     richTextToHtmlString(obj) {
