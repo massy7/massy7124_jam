@@ -5,6 +5,7 @@
   >
     <v-avatar
       v-if="src !== null"
+      :class="{ 'mr-0 ml-0': !hasSlot }"
       tile
       class="chip-icon"
     >
@@ -29,6 +30,11 @@ export default {
       type: String,
       default: null
     }
+  },
+  computed: {
+    hasSlot() {
+      return !!this.$slots.default
+    }
   }
 }
 </script>
@@ -39,5 +45,6 @@ export default {
 
 .v-chip.v-chip.v-chip--outline .v-avatar
   margin-left -4px
+  margin-right 4px
   height 20px !important
 </style>

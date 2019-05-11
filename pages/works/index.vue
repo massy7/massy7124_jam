@@ -48,10 +48,15 @@
                   >
                     Contentful
                   </chip-technology>
+                  <chip-technology
+                    src="/img/logo/pwa.svg"
+                    alt="PWA"
+                  />
 
                   <div>
                     こちらのサイトは、Nuxt.js (Front)、Netlify (Server)、Contentful(CMS)、で構成されています。<br>
-                    Contentfulは<nuxt-link :to="{ name: 'blog' }"><span class="color-main">Blog</span></nuxt-link>で活用しています。
+                    Contentfulは<nuxt-link :to="{ name: 'blog' }"><span class="color-main">Blog</span></nuxt-link>で活用しています。<br>
+                    ちなみに、謎にPWAなので、ホーム画面に置くことが可能です。
                   </div>
                 </div>
               </v-card-title>
