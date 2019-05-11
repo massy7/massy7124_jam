@@ -57,11 +57,11 @@ section > h2
 a
   text-decoration none
 
-p > a
+article * a
   color deepskyblue
 
-// a:hover, a:focus, a:visited
-//   background-color rgba( 0, 0, 0, 0.1 )
+  &:hover, &:focus, &:visited
+    color: #009DFF
 
 .grid
   padding-bottom 16px
@@ -177,22 +177,22 @@ for num in (0..10)
   background-color deepskyblue
 
 .color-main
-  color deepskyblue
+  color deepskyblue !important
 
 .color-techloco
-  color #215A81
+  color #215A81 !important
 
 .color-draft
-  color #D85252
+  color #D85252 !important
 
 .color-lycle
-  color #0bd688
+  color #0bd688 !important
 
 .color-databeat
-  color #FB5E5E
+  color #FB5E5E !important
 
 .color-knct
-  color #01418E
+  color #01418E !important
 /*--------------------------------------------------------------
 | Transition
 --------------------------------------------------------------*/
@@ -234,6 +234,9 @@ for num in (0..10)
 --------------------------------------------------------------*/
 .frame
   overflow hidden
+
+  .frame-inner
+    height 100%
 
 /* 線(ボーダー)のスタイル 共通 */
 .frame:before,

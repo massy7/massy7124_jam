@@ -28,8 +28,8 @@
         </div>
       </v-card-title>
 
-      <v-card-text class="pt-0 pb-0 text-xs-right">
-        {{ date.replace('T', ' ' ) }}
+      <v-card-text class="date pt-0 pb-0 text-xs-right">
+        <v-icon small>update</v-icon> {{ date.replace('T', ' ' ) }}
       </v-card-text>
     </div>
   </v-card>
@@ -73,4 +73,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.date
+  position absolute
+  bottom 0px
 </style>

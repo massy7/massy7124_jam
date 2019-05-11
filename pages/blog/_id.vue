@@ -54,7 +54,7 @@
           />
 
           <div
-            class="mt-8 mb-8"
+            class="content mt-8 mb-8"
             v-html="richTextToHtmlString(data.content)"
           />
         </v-flex>
@@ -116,6 +116,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+>>> h2
+  padding-top 24px
+
 .blog-title
   font-size 36px
 </style>

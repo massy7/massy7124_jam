@@ -41,4 +41,9 @@ footer
 .copyright
   color white
   font-size 16px
+
+.v-icon
+  position relative
+  top 2px
+  vertical-align unset
 </style>

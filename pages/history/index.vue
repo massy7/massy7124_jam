@@ -61,12 +61,6 @@
                   Laravel5
                 </chip-technology>
                 <chip-technology
-                  src="/img/logo/google-cloud.svg"
-                  alt="GCP"
-                >
-                  GCP
-                </chip-technology>
-                <chip-technology
                   src="/img/logo/google-bigquery.svg"
                   alt="Google BigQuery"
                 >
@@ -128,10 +122,10 @@
                   Laravel5
                 </chip-technology>
                 <chip-technology
-                  src="/img/logo/amazon-ec2.svg"
-                  alt="Amazon EC2"
+                  src="/img/logo/line.svg"
+                  alt="LINE Bot"
                 >
-                  EC2
+                  LINE Bot
                 </chip-technology>
               </div>
             </div>
@@ -183,12 +177,6 @@
                   alt="Laravel5"
                 >
                   Laravel5
-                </chip-technology>
-                <chip-technology
-                  src="/img/logo/amazon-ec2.svg"
-                  alt="Amazon EC2"
-                >
-                  EC2
                 </chip-technology>
               </div>
             </div>

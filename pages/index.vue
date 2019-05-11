@@ -194,6 +194,32 @@
         </div>
         <div class="">
           <a 
+            href="https://eslint.org/"
+            title="ESLint"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              class="bland-logo"
+              src="/img/logo/eslint.svg"
+              alt="ESLint">
+          </a>
+        </div>
+        <div class="">
+          <a 
+            href="http://stylus-lang.com/"
+            title="Stylus"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              class="bland-logo"
+              src="/img/logo/stylus.svg"
+              alt="Stylus">
+          </a>
+        </div>
+        <div class="">
+          <a 
             href="https://jquery.com/"
             title="jQuery"
             target="_blank"
@@ -320,6 +346,19 @@
               class="bland-logo"
               src="/img/logo/amazon-ec2.svg"
               alt="Amazon EC2">
+          </a>
+        </div>
+        <div class="">
+          <a 
+            href="https://developers.line.biz/ja/"
+            title="LINE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              class="bland-logo"
+              src="/img/logo/line.svg"
+              alt="LINE">
           </a>
         </div>
         <div class="">

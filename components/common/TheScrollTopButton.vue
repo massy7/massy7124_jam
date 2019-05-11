@@ -34,7 +34,7 @@ export default {
   methods: {
     handleScroll() {
       this.scrollY = window.scrollY
-      this.isButtonEnable = this.scrollY > 200
+      this.isButtonEnable = this.scrollY > 300
     },
     scrollTop(element, duration, options) {
       VueScrollTo.scrollTo(element, duration, options)
