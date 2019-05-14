@@ -10,27 +10,33 @@
         aspect-ratio="1.77"
       />
 
-      <v-card-title primary-title>
+      <v-card-title
+        primary-title
+        class="pt-16 pr-16 pl-16 pb-0"
+      >
         <div>
           <h3 class="headline mb-0">{{ title }}</h3>
-
-          <chip-technology
-            v-for="(chip, index) in chips"
-            :key="index"
-            :src="chip.imageUrl !== null ? chip.imageUrl : '/img/noimage.png'"
-            :alt="chip.imageAlt"
-          >
-            {{ chip.name }}
-          </chip-technology>
-
-          <div>
-            {{ description | stringLimit(100, '...') }}
-          </div>
         </div>
       </v-card-title>
 
-      <v-card-text class="date pt-0 pb-0 text-xs-right">
-        <v-icon small>update</v-icon> {{ date.replace('T', ' ' ) }}
+      <v-card-text class="pl-16 pr-16 pb-16">
+        <chip-technology
+          v-for="(chip, index) in chips"
+          :key="index"
+          :src="chip.imageUrl !== null ? chip.imageUrl : '/img/noimage.png'"
+          :alt="chip.imageAlt"
+        >
+          {{ chip.name }}
+        </chip-technology>
+
+        <div class="text-xs-right">
+          <v-spacer/>
+          <v-icon small>update</v-icon> {{ date.replace('T', ' ' ) }}
+        </div>
+
+        <div>
+          {{ description | stringLimit(100, '...') }}
+        </div>
       </v-card-text>
     </div>
   </v-card>
