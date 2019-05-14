@@ -407,6 +407,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.wrapper
+  max-width 960px
+
 .grid-profile
   grid-template-rows 48px 1fr 1fr
   grid-template-columns 1fr 3fr
