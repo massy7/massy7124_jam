@@ -10,7 +10,7 @@
           <v-timeline-item
             key="1"
             :data-index="1"
-            :class="{ 'to-right': $vuetify.breakpoint.mdAndUp }"
+            :class="{ 'to-right': $vuetify.breakpoint.smAndUp }"
             class="now"
             color="#FB5E5E"
           >
@@ -134,7 +134,7 @@
           <v-timeline-item
             key="3"
             :data-index="3"
-            :class="{ 'to-right': $vuetify.breakpoint.mdAndUp }"
+            :class="{ 'to-right': $vuetify.breakpoint.smAndUp }"
             color="#D85252"
             small
           >
