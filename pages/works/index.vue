@@ -18,7 +18,7 @@
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
-            class="frame padding-16"
+            class="frame"
             flat
           >
             <div class="frame-inner">
@@ -76,7 +76,7 @@
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
-            class="frame padding-16"
+            class="frame"
             flat
           >
             <div class="frame-inner">
@@ -128,7 +128,7 @@
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
-            class="frame padding-16"
+            class="frame"
             flat
           >
             <div class="frame-inner">
