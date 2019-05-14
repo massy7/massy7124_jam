@@ -12,11 +12,13 @@
           v-for="(blog, index) in blogs"
           :key="blog.id"
           :data-index="index"
-          :offset-sm2="blogs.length % 3 == 2 && (blogs.length - 2) == index"
-          :offset-sm4="blogs.length % 3 == 1 && (blogs.length - 1) == index"
-          class="padding-8"
+          :offset-sm3="blogs.length % 2 == 1 && (blogs.length - 1) == index"
+          :offset-md2="blogs.length % 3 == 2 && (blogs.length - 2) == index"
+          :offset-md4="blogs.length % 3 == 1 && (blogs.length - 1) == index"
+          class="padding-16"
           xs12
-          sm4
+          sm6
+          md4
         >
           <nuxt-link :to="{ name: 'blog-id', params: { id: blog.id }}">
             <blog-card

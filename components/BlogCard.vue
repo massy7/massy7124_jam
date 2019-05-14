@@ -1,7 +1,8 @@
 <template>
   <v-card
     :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
-    class="frame"
+    class="frame padding-16"
+    flat
   >
     <div class="frame-inner">
       <v-img
@@ -75,5 +76,6 @@ export default {
 <style lang="stylus" scoped>
 .date
   position absolute
-  bottom 0px
+  bottom 16px
+  right 8px
 </style>

@@ -11,13 +11,15 @@
         <v-flex
           key="1"
           data-index="1"
-          class="padding-8"
+          class="padding-16"
           xs12
           sm6
+          md4
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
-            class="frame"
+            class="frame padding-16"
+            flat
           >
             <div class="frame-inner">
               <v-img
@@ -67,13 +69,15 @@
         <v-flex
           key="2"
           data-index="2"
-          class="padding-8"
+          class="padding-16"
           xs12
           sm6
+          md4
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
-            class="frame"
+            class="frame padding-16"
+            flat
           >
             <div class="frame-inner">
               <v-img
@@ -117,14 +121,15 @@
         <v-flex
           key="3"
           data-index="3"
-          class="padding-8"
+          class="padding-16"
           xs12
           sm6
-          offset-sm3
+          md4
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
-            class="frame"
+            class="frame padding-16"
+            flat
           >
             <div class="frame-inner">
               <v-img

@@ -257,7 +257,9 @@ export default {
 
 <style lang="stylus" scoped>
 .timeline
+  max-width 960px
   width 100%
+  margin 0 auto
 
 .timeline-enter-active, .timeline-leave-active, .timeline-move
   transition opacity 0.5s, transform 0.5s
