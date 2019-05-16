@@ -124,6 +124,7 @@
           class="padding-16"
           xs12
           sm6
+          offset-sm3
           md4
         >
           <v-card
