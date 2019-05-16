@@ -9,8 +9,8 @@
         @before-enter="beforeEnter"
       >
         <v-flex
-          key="1"
-          data-index="1"
+          key="0"
+          data-index="0"
           class="padding-16"
           xs12
           sm6
@@ -67,8 +67,8 @@
         </v-flex>
 
         <v-flex
-          key="2"
-          data-index="2"
+          key="1"
+          data-index="1"
           class="padding-16"
           xs12
           sm6
@@ -119,8 +119,8 @@
         </v-flex>
 
         <v-flex
-          key="3"
-          data-index="3"
+          key="2"
+          data-index="2"
           class="padding-16"
           xs12
           sm6
@@ -177,7 +177,7 @@ export default {
   },
   methods: {
     beforeEnter(el) {
-      el.style.transitionDelay = 150 * parseInt(el.dataset.index) + 'ms'
+      el.style.transitionDelay = 150 + 150 * parseInt(el.dataset.index) + 'ms'
     }
   },
   transition(to, from) {
