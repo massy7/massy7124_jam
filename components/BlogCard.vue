@@ -8,11 +8,12 @@
       <v-img
         :src="imageUrl !== null ? imageUrl : '/img/noimage.png'"
         aspect-ratio="1.77"
+        class="margin-16"
       />
 
       <v-card-title
         primary-title
-        class="pt-16 pr-16 pl-16 pb-0"
+        class="pt-0 pr-16 pl-16 pb-0"
       >
         <div>
           <h3 class="headline mb-0">{{ title }}</h3>

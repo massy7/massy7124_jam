@@ -394,6 +394,17 @@
 
 <script>
 export default {
+  mounted() {
+    window.onkeydown = e => {
+      if (e.keyCode == 37) {
+        window.onkeydown = null
+        this.$router.push({ name: 'contact' })
+      } else if (e.keyCode == 39) {
+        window.onkeydown = null
+        this.$router.push({ name: 'works' })
+      }
+    }
+  },
   transition(to, from) {
     if (!from) return 'slide-left'
     return 'slide-right'

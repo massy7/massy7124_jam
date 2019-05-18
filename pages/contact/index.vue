@@ -121,6 +121,17 @@
 
 <script>
 export default {
+  mounted() {
+    window.onkeydown = e => {
+      if (e.keyCode == 37) {
+        window.onkeydown = null
+        this.$router.push({ name: 'blog' })
+      } else if (e.keyCode == 39) {
+        window.onkeydown = null
+        this.$router.push({ name: 'index' })
+      }
+    }
+  },
   methods: {
     copyToClipboard() {
       const email = document.querySelector('#email-address')

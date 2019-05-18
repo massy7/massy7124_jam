@@ -13,12 +13,13 @@
           :key="blog.id"
           :data-index="index"
           :offset-sm3="blogs.length % 2 == 1 && (blogs.length - 1) == index"
-          :offset-md2="blogs.length % 3 == 2 && (blogs.length - 2) == index"
-          :offset-md4="blogs.length % 3 == 1 && (blogs.length - 1) == index"
+          :offset-lg2="blogs.length % 3 == 2 && (blogs.length - 2) == index"
+          :offset-lg4="blogs.length % 3 == 1 && (blogs.length - 1) == index"
+          :class="{ 'pl-0 pr-0': $vuetify.breakpoint.xsOnly }"
           class="padding-16"
           xs12
           sm6
-          md4
+          lg4
         >
           <nuxt-link :to="{ name: 'blog-id', params: { id: blog.id }}">
             <blog-card
@@ -53,6 +54,17 @@ export default {
       return
     }
     await store.dispatch('blogs/fetchBlogs')
+  },
+  mounted() {
+    window.onkeydown = e => {
+      if (e.keyCode == 37) {
+        window.onkeydown = null
+        this.$router.push({ name: 'history' })
+      } else if (e.keyCode == 39) {
+        window.onkeydown = null
+        this.$router.push({ name: 'contact' })
+      }
+    }
   },
   methods: {
     beforeEnter(el) {

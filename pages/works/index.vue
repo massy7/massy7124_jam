@@ -10,11 +10,12 @@
       >
         <v-flex
           key="0"
+          :class="{ 'pl-0 pr-0': $vuetify.breakpoint.xsOnly }"
           data-index="0"
           class="padding-16"
           xs12
           sm6
-          md4
+          lg4
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
@@ -68,11 +69,12 @@
 
         <v-flex
           key="1"
+          :class="{ 'pl-0 pr-0': $vuetify.breakpoint.xsOnly }"
           data-index="1"
           class="padding-16"
           xs12
           sm6
-          md4
+          lg4
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
@@ -121,11 +123,12 @@
         <v-flex
           key="2"
           :offset-sm3="$vuetify.breakpoint.smOnly"
+          :class="{ 'pl-0 pr-0': $vuetify.breakpoint.xsOnly }"
           data-index="2"
           class="padding-16"
           xs12
           sm6
-          md4
+          lg4
         >
           <v-card
             :class="{ 'height-p100': $vuetify.breakpoint.smAndUp }"
@@ -175,6 +178,17 @@ import ChipTechnology from '~/components/ChipTechnology.vue'
 export default {
   components: {
     ChipTechnology
+  },
+  mounted() {
+    window.onkeydown = e => {
+      if (e.keyCode == 37) {
+        window.onkeydown = null
+        this.$router.push({ name: 'index' })
+      } else if (e.keyCode == 39) {
+        window.onkeydown = null
+        this.$router.push({ name: 'history' })
+      }
+    }
   },
   methods: {
     beforeEnter(el) {

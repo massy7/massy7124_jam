@@ -236,6 +236,18 @@ export default {
   components: {
     ChipTechnology
   },
+  mounted() {
+    document.getElementsByClassName('wrapper')[0].click()
+    window.onkeydown = e => {
+      if (e.keyCode == 37) {
+        window.onkeydown = null
+        this.$router.push({ name: 'works' })
+      } else if (e.keyCode == 39) {
+        window.onkeydown = null
+        this.$router.push({ name: 'blog' })
+      }
+    }
+  },
   methods: {
     beforeEnter(el) {
       el.style.transitionDelay = 300 * parseInt(el.dataset.index) + 'ms'

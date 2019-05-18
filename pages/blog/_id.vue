@@ -7,6 +7,7 @@
           class="padding-8"
           sm3
         >
+          <h2 class="pt-0 mb-16">その他の記事</h2>
           <nuxt-link
             v-for="(blog, index) in blogs"
             :key="blog.id"

@@ -1,22 +1,46 @@
 <template>
-  <v-card class="frame card-mini mb-16">
+  <v-card
+    class="frame card-mini mb-16"
+    flat
+  >
     <div class="frame-inner">
-      <v-card-title
-        primary-title
-        class="padding-8"
+      <v-layout
+        align-center
+        row
+        wrap
       >
-        <div>
-          <h3 class="mb-0">{{ title | stringLimit(10, '...') }}</h3>
-
-          <chip-technology
-            v-if="chips.length !== 0"
-            :src="chips[0].imageUrl !== null ? chips[0].imageUrl : '/img/noimage.png'"
-            :alt="chips[0].imageAlt"
+        <v-flex
+          v-if="$vuetify.breakpoint.lgAndUp"
+          lg3
+        >
+          <v-img
+            :src="imageUrl !== null ? imageUrl : '/img/noimage.png'"
+            aspect-ratio="1"
+            contain
+          />
+        </v-flex>
+        <v-flex
+          md12
+          lg9
+        >
+          <v-card-title
+            primary-title
+            class="padding-8"
           >
-            {{ chips[0].name }}
-          </chip-technology>
-        </div>
-      </v-card-title>
+            <div>
+              <h3 class="mb-0">{{ title }}</h3>
+
+              <chip-technology
+                v-if="chips.length !== 0"
+                :src="chips[0].imageUrl !== null ? chips[0].imageUrl : '/img/noimage.png'"
+                :alt="chips[0].imageAlt"
+              >
+                {{ chips[0].name }}
+              </chip-technology>
+            </div>
+          </v-card-title>
+        </v-flex>
+      </v-layout>
     </div>
   </v-card>
 </template>
