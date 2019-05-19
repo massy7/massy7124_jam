@@ -22,11 +22,12 @@
             class="frame"
             flat
           >
-            <div class="frame-inner">
+            <div class="frame-inner pt-16">
               <v-img
                 src="/img/massy7124.jpg"
                 aspect-ratio="1.77"
                 contain
+                class="margin-16 mt-0"
               />
 
               <v-card-title primary-title>
@@ -59,7 +60,7 @@
                   <div>
                     こちらのサイトは、Nuxt.js (Front)、Netlify (Server)、Contentful(CMS)、で構成されています。<br>
                     Contentfulは<nuxt-link :to="{ name: 'blog' }"><span class="color-main">Blog</span></nuxt-link>で活用しています。<br>
-                    ちなみに、謎にPWAなので、ホーム画面に置くことが可能です。
+                    ちなみに、謎にPWAなので、ホーム画面に置くことが可能です。また、矢印キーでも移動できます。
                   </div>
                 </div>
               </v-card-title>
@@ -81,10 +82,12 @@
             class="frame"
             flat
           >
-            <div class="frame-inner">
+            <div class="frame-inner pt-16">
               <v-img
                 src="/img/resimage-site.png"
                 aspect-ratio="1.77"
+                contain
+                class="margin-16 mt-0"
               />
 
               <v-card-title primary-title>
@@ -122,7 +125,7 @@
 
         <v-flex
           key="2"
-          :offset-sm3="$vuetify.breakpoint.smOnly"
+          :offset-sm3="$vuetify.breakpoint.mdAndDown"
           :class="{ 'pl-0 pr-0': $vuetify.breakpoint.xsOnly }"
           data-index="2"
           class="padding-16"
@@ -135,11 +138,12 @@
             class="frame"
             flat
           >
-            <div class="frame-inner">
+            <div class="frame-inner pt-16">
               <v-img
                 src="/img/logo/skype.svg"
                 contain
                 aspect-ratio="1.77"
+                class="margin-16 mt-0"
               />
 
               <v-card-title primary-title>

@@ -4,11 +4,11 @@
     class="frame"
     flat
   >
-    <div class="frame-inner">
+    <div class="frame-inner pt-16">
       <v-img
         :src="imageUrl !== null ? imageUrl : '/img/noimage.png'"
         aspect-ratio="1.77"
-        class="margin-16"
+        class="margin-16 mt-0"
       />
 
       <v-card-title

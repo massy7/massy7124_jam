@@ -237,7 +237,6 @@ export default {
     ChipTechnology
   },
   mounted() {
-    document.getElementsByClassName('wrapper')[0].click()
     window.onkeydown = e => {
       if (e.keyCode == 37) {
         window.onkeydown = null

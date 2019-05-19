@@ -6,6 +6,9 @@ export const state = () => ({
 })
 
 export const getters = {
+  list: state => {
+    return state.blogs
+  },
   getById: state => id => {
     const blog = state.blogs.filter(blog => blog.id === id)[0]
     if (blog === undefined) {

@@ -26,15 +26,16 @@
         </v-flex>
 
         <v-flex
+          v-if="blogData"
           :sm9="$vuetify.breakpoint.mdAndUp"
           xs12
           class="pt-8 pl-16 pr-16"
         >
-          <h1 class="blog-title">{{ data.title }}</h1>
+          <h1 class="blog-title">{{ blogData.title }}</h1>
 
           <div class="text-xs-right">
             <chip-technology
-              v-for="(chip, index) in data.chips"
+              v-for="(chip, index) in blogData.chips"
               :key="index"
               :src="chip.imageUrl !== null ? chip.imageUrl : '/img/noimage.png'"
               :alt="chip.imageAlt"
@@ -44,11 +45,11 @@
           </div>
 
           <p class="text-xs-right">
-            <v-icon small>update</v-icon> {{ data.date.replace('T', ' ' ) }}
+            <v-icon small>update</v-icon> {{ blogData.date.replace('T', ' ' ) }}
           </p>
 
           <v-img
-            :src="`https://${data.image.fields.file.url}`"
+            :src="`https://${blogData.image.fields.file.url}`"
             aspect-ratio="1.77"
             contain
             max-height="240px"
@@ -56,7 +57,7 @@
 
           <div
             class="content mt-8 mb-8"
-            v-html="richTextToHtmlString(data.content)"
+            v-html="richTextToHtmlString(blogData.content)"
           />
         </v-flex>
       </v-layout>
@@ -77,32 +78,93 @@ export default {
     BlogCardMini,
     ChipTechnology
   },
-  data() {
+  async asyncData({ store, route }) {
+    if (!store.state.blogs.blogs.length) {
+      await store.dispatch('blogs/fetchBlogs')
+    }
+
+    let prevId = null
+    let nextId = null
+    const blogs = store.getters['blogs/list']
+    const blogLength = blogs.length
+    const filteredBlogs = blogs.filter((blog, index, blogs) => {
+      if (blog.id === route.params.id) {
+        if (index > 0) {
+          prevId = blogs[index - 1].id
+        }
+
+        if (index < blogLength - 1) {
+          nextId = blogs[index + 1].id
+        }
+
+        return false
+      }
+      return true
+    })
+    const blogData = store.getters['blogs/getById'](route.params.id)
+
     return {
-      content: null
+      blogs: filteredBlogs,
+      blogData: blogData,
+      prevId: prevId,
+      nextId: nextId
     }
   },
-  computed: {
-    blogs() {
-      return this.$store.state.blogs.blogs.filter(
-        blog => blog.id !== this.$route.params.id
-      )
-    },
-    data() {
-      return this.$store.getters['blogs/getById'](this.$route.params.id)
-    }
-  },
-  async asyncData({ store }) {
-    if (store.state.blogs.blogs.length) {
-      return
-    }
-    await store.dispatch('blogs/fetchBlogs')
-  },
+  // data() {
+  //   return {
+  //     prevId: null,
+  //     nextId: null
+  //   }
+  // },
+  // computed: {
+  //   blogs() {
+  //     const blogLength = this.$store.state.blogs.blogs.length
+  //     return this.$store.state.blogs.blogs.filter((blog, index, thisBlogs) => {
+  //       if (blog.id !== this.$route.params.id) {
+  //         if (index > 0) {
+  //           this.prevId = thisBlogs[index - 1].id
+  //         } else {
+  //           this.prevId = thisBlogs[blogLength - 1].id
+  //         }
+
+  //         if (index < blogLength - 1) {
+  //           this.nextId = thisBlogs[index + 1].id
+  //         } else {
+  //           this.nextId = thisBlogs[blogLength + 1].id
+  //         }
+
+  //         return true
+  //       }
+  //       return false
+  //       // return blog.id !== this.$route.params.id
+  //     })
+  //   },
+  //   blogData() {
+  //     return this.$store.getters['blogs/getById'](this.$route.params.id)
+  //   }
+  // },
   mounted() {
-    let targets = this.$el.querySelectorAll('code')
-    targets.forEach(target => {
+    this.$el.querySelectorAll('code').forEach(target => {
       hljs.highlightBlock(target)
     })
+
+    window.onkeydown = e => {
+      if (e.keyCode == 37) {
+        window.onkeydown = null
+        if (this.prevId !== null) {
+          this.$router.push({ name: 'blog-id', params: { id: this.prevId } })
+        } else {
+          this.$router.push({ name: 'history' })
+        }
+      } else if (e.keyCode == 39) {
+        window.onkeydown = null
+        if (this.nextId !== null) {
+          this.$router.push({ name: 'blog-id', params: { id: this.nextId } })
+        } else {
+          this.$router.push({ name: 'contact' })
+        }
+      }
+    }
   },
   methods: {
     richTextToHtmlString(obj) {
@@ -111,8 +173,8 @@ export default {
   },
   transition(to, from) {
     if (!from) return 'slide-left'
-    else if (from.name.includes('blog-id')) return 'slide-down'
-    else if (to.name.includes('blog-id')) return 'slide-up'
+    else if (from.name === 'blog') return 'slide-up'
+    else if (to.name.includes('blog-id')) return 'page'
     else return from.name === 'contact' ? 'slide-right' : 'slide-left'
   },
   head() {

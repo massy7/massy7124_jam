@@ -201,37 +201,41 @@ for num in (0..10)
 | Transition
 --------------------------------------------------------------*/
 .page-enter-active, .page-leave-active
-  transition opacity 1.0s
+  transition opacity 0.25s
 
 .page-enter, .page-leave-active
   opacity 0
 
 .slide-left-enter,
 .slide-right-leave-active
+  transition all 0.25s
   opacity 0
   transform translate(50%, 0)
 
 .slide-left-leave-active,
 .slide-right-enter
+  transition all 0.25s
   opacity 0
   transform translate(-50%, 0)
 
 .slide-up-enter,
 .slide-down-leave-active
+  transition all 0.25s
   opacity 0
   transform translate(0, 50%)
 
 .slide-up-leave-active,
 .slide-down-enter
+  transition all 0.25s
   opacity 0
   transform translate(0, -50%)
 
 .card-list-enter-active, .card-list-leave-active, .card-list-move
-  transition opacity 0.5s, transform 0.5s
+  transition all 0.5s
 
 .card-list-enter, .card-list-leave-to
   opacity 0
-  transform translateY(40px)
+  transform translateY(64px)
 
 /*--------------------------------------------------------------
 | Animation

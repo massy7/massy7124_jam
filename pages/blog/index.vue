@@ -44,16 +44,16 @@ export default {
   components: {
     BlogCard
   },
-  computed: {
-    blogs() {
-      return this.$store.state.blogs.blogs
-    }
-  },
   async asyncData({ store }) {
     if (store.state.blogs.blogs.length) {
       return
     }
     await store.dispatch('blogs/fetchBlogs')
+  },
+  computed: {
+    blogs() {
+      return this.$store.state.blogs.blogs
+    }
   },
   mounted() {
     window.onkeydown = e => {
