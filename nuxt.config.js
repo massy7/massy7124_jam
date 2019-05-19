@@ -91,7 +91,12 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/google-analytics'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/sitemap'
+  ],
   /*
   ** Axios module configuration
   */
@@ -136,5 +141,14 @@ module.exports = {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
     CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
+  },
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://massy7124.me',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: true,
+    exclude: []
   }
 }
