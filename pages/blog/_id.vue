@@ -27,9 +27,10 @@
 
         <v-flex
           v-if="blogData"
+          :class="{ 'pl-0 pr-0': $vuetify.breakpoint.xsOnly }"
           :sm9="$vuetify.breakpoint.mdAndUp"
           xs12
-          class="pt-8 pl-16 pr-16"
+          class="pl-16 pr-16"
         >
           <h1 class="blog-title">{{ blogData.title }}</h1>
 
