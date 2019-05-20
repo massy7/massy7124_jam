@@ -79,7 +79,7 @@ export default {
   },
   head() {
     return {
-      title: 'Works'
+      title: 'Blog'
     }
   }
 }

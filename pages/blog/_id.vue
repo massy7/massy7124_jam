@@ -111,39 +111,6 @@ export default {
       nextId: nextId
     }
   },
-  // data() {
-  //   return {
-  //     prevId: null,
-  //     nextId: null
-  //   }
-  // },
-  // computed: {
-  //   blogs() {
-  //     const blogLength = this.$store.state.blogs.blogs.length
-  //     return this.$store.state.blogs.blogs.filter((blog, index, thisBlogs) => {
-  //       if (blog.id !== this.$route.params.id) {
-  //         if (index > 0) {
-  //           this.prevId = thisBlogs[index - 1].id
-  //         } else {
-  //           this.prevId = thisBlogs[blogLength - 1].id
-  //         }
-
-  //         if (index < blogLength - 1) {
-  //           this.nextId = thisBlogs[index + 1].id
-  //         } else {
-  //           this.nextId = thisBlogs[blogLength + 1].id
-  //         }
-
-  //         return true
-  //       }
-  //       return false
-  //       // return blog.id !== this.$route.params.id
-  //     })
-  //   },
-  //   blogData() {
-  //     return this.$store.getters['blogs/getById'](this.$route.params.id)
-  //   }
-  // },
   mounted() {
     this.$el.querySelectorAll('code').forEach(target => {
       hljs.highlightBlock(target)
@@ -179,8 +146,26 @@ export default {
     else return from.name === 'contact' ? 'slide-right' : 'slide-left'
   },
   head() {
-    return {
-      title: 'Blog'
+    if (!!this.blogData === false) {
+      return {
+        title: 'Blog'
+      }
+    }
+
+    const title = this.blogData.title
+    const description = this.blogData.description || null
+
+    if (description !== null) {
+      return {
+        title: title,
+        meta: [
+          { hid: 'description', name: 'description', content: description }
+        ]
+      }
+    } else {
+      return {
+        title: title
+      }
     }
   }
 }
