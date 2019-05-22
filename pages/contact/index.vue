@@ -14,7 +14,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/twitter.svg"
-              alt="Twitter">
+              alt="Twitter"
+            >
           </a>
         </div>
         <div class="">
@@ -28,7 +29,8 @@
               class="bland-logo"
               src="/img/logo/facebook.svg"
               alt="Facebook"
-              style="width:70%;">
+              style="width:70%;"
+            >
           </a>
         </div>
         <div class="">
@@ -41,7 +43,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/instagram.svg"
-              alt="Instagram">
+              alt="Instagram"
+            >
           </a>
         </div>
         <div class="">
@@ -68,7 +71,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/askfm.svg"
-              alt="Ask.fm">
+              alt="Ask.fm"
+            >
           </a>
         </div>
         <div class="">
@@ -81,7 +85,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/peing.svg"
-              alt="Peing">
+              alt="Peing"
+            >
           </a>
         </div>
         <div class="">
@@ -95,7 +100,8 @@
               class="bland-logo"
               src="/img/logo/wantedly.svg"
               alt="Wantedly"
-              style="width:70%;">
+              style="width:70%;"
+            >
           </a>
         </div>
       </div>
