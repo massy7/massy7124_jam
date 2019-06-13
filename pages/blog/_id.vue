@@ -136,7 +136,19 @@ export default {
   },
   methods: {
     richTextToHtmlString(obj) {
-      return documentToHtmlString(obj)
+      let htmlString = documentToHtmlString(obj)
+
+      htmlString = htmlString
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&amp;/g, '&')
+        .replace(/<p><iframe/g, '<div class="iframe-wrapper"><iframe')
+        .replace(/<\/iframe><\/p>/g, '</iframe></div>')
+      console.log(htmlString)
+
+      return htmlString
     }
   },
   transition(to, from) {
@@ -177,4 +189,18 @@ export default {
 
 .blog-title
   font-size 36px
+
+>>> .iframe-wrapper
+  position relative
+  max-width 100%
+>>> .iframe-wrapper:before
+  content ""
+  display block
+  padding-top 56.25%
+>>> iframe
+  position absolute
+  top 0
+  left 0
+  max-width 100%
+  max-height 100%
 </style>
