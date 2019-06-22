@@ -277,6 +277,20 @@
         </div>
         <div class="">
           <a 
+            href="https://swagger.io/"
+            title="Swagger"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              class="bland-logo"
+              src="/img/logo/swagger.svg"
+              alt="Swagger"
+            >
+          </a>
+        </div>
+        <div class="">
+          <a 
             href="https://circleci.com/"
             title="CircleCI"
             target="_blank"
