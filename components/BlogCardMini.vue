@@ -37,6 +37,11 @@
               >
                 {{ chips[0].name }}
               </chip-technology>
+
+              <div class="text-xs-right">
+                <v-spacer/>
+                <v-icon small>update</v-icon> {{ date.slice(0, 10) }}
+              </div>
             </div>
           </v-card-title>
         </v-flex>

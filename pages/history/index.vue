@@ -34,7 +34,14 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="color-databeat"
-                >アジト株式会社</a>
+                >
+                  <img 
+                    class="company-logo"
+                    src="/img/logo/agito.svg"
+                    alt="agito"
+                  >
+                  アジト株式会社
+                </a>
               </h2>
 
               <div>
@@ -267,6 +274,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.company-logo
+  width 22px
+
 .timeline
   max-width 960px
   width 100%

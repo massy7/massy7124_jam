@@ -10,7 +10,8 @@
           <img 
             class="icon-profile"
             src="/img/massy7124.jpg"
-            alt="massy7124">
+            alt="massy7124"
+          >
         </div>
 
         <div class="name center">
@@ -46,7 +47,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/nuxt.svg"
-              alt="Nuxt.js">
+              alt="Nuxt.js"
+            >
           </a>
         </div>
         <div class="">
@@ -59,7 +61,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/vue.svg"
-              alt="Vue.js">
+              alt="Vue.js"
+            >
           </a>
         </div>
         <div class="">
@@ -72,7 +75,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/express.svg"
-              alt="Express">
+              alt="Express"
+            >
           </a>
         </div>
         <div class="">
@@ -85,7 +89,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/nodejs-color.svg"
-              alt="Node.js">
+              alt="Node.js"
+            >
           </a>
         </div>
         <div class="">
@@ -98,7 +103,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/webpack.svg"
-              alt="webpack">
+              alt="webpack"
+            >
           </a>
         </div>
         <div class="">
@@ -111,7 +117,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/nginx.svg"
-              alt="nginx">
+              alt="nginx"
+            >
           </a>
         </div>
         <div class="">
@@ -124,7 +131,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/laravel-color.svg"
-              alt="Laravel5">
+              alt="Laravel5"
+            >
           </a>
         </div>
         <div class="">
@@ -137,7 +145,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/cakephp.svg"
-              alt="CakePHP3">
+              alt="CakePHP3"
+            >
           </a>
         </div>
         <div class="">
@@ -150,7 +159,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/php-color.svg"
-              alt="PHP">
+              alt="PHP"
+            >
           </a>
         </div>
         <div class="">
@@ -163,7 +173,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/html5-color.svg"
-              alt="HTML5">
+              alt="HTML5"
+            >
           </a>
         </div>
         <div class="">
@@ -176,7 +187,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/css3-color.svg"
-              alt="CSS3">
+              alt="CSS3"
+            >
           </a>
         </div>
         <div class="">
@@ -189,7 +201,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/es6.svg"
-              alt="ES6">
+              alt="ES6"
+            >
           </a>
         </div>
         <div class="">
@@ -202,7 +215,36 @@
             <img 
               class="bland-logo"
               src="/img/logo/eslint.svg"
-              alt="ESLint">
+              alt="ESLint"
+            >
+          </a>
+        </div>
+        <div class="">
+          <a 
+            href="https://vuetifyjs.com/ja/"
+            title="Vuetify"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              class="bland-logo"
+              src="/img/logo/vuetify.svg"
+              alt="Vuetify"
+            >
+          </a>
+        </div>
+        <div class="">
+          <a 
+            href="https://getbootstrap.com/"
+            title="Bootstrap"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              class="bland-logo"
+              src="/img/logo/bootstrap.svg"
+              alt="Bootstrap"
+            >
           </a>
         </div>
         <div class="">
@@ -215,7 +257,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/stylus.svg"
-              alt="Stylus">
+              alt="Stylus"
+            >
           </a>
         </div>
         <div class="">
@@ -228,7 +271,22 @@
             <img 
               class="bland-logo"
               src="/img/logo/jquery.svg"
-              alt="jQuery">
+              alt="jQuery"
+            >
+          </a>
+        </div>
+        <div class="">
+          <a 
+            href="https://circleci.com/"
+            title="CircleCI"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              class="bland-logo"
+              src="/img/logo/circleci.svg"
+              alt="CircleCI"
+            >
           </a>
         </div>
         <div class="">
@@ -241,7 +299,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/cpp.svg"
-              alt="C++">
+              alt="C++"
+            >
           </a>
         </div>
         <div class="">
@@ -254,7 +313,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/github.svg"
-              alt="GitHub">
+              alt="GitHub"
+            >
           </a>
         </div>
         <div class="">
@@ -267,7 +327,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/docker.svg"
-              alt="Docker">
+              alt="Docker"
+            >
           </a>
         </div>
         <div class="">
@@ -280,7 +341,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/contentful.svg"
-              alt="Contentful">
+              alt="Contentful"
+            >
           </a>
         </div>
         <div class="">
@@ -293,7 +355,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/netlify.svg"
-              alt="Netlify">
+              alt="Netlify"
+            >
           </a>
         </div>
         <div class="">
@@ -306,7 +369,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/mongodb.svg"
-              alt="MongoDB">
+              alt="MongoDB"
+            >
           </a>
         </div>
         <div class="">
@@ -319,7 +383,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/mysql-logo.svg"
-              alt="MySQL">
+              alt="MySQL"
+            >
           </a>
         </div>
         <div class="">
@@ -332,7 +397,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/google-cloud.svg"
-              alt="Google Cloud Platform">
+              alt="Google Cloud Platform"
+            >
           </a>
         </div>
         <div class="">
@@ -345,7 +411,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/amazon-ec2.svg"
-              alt="Amazon EC2">
+              alt="Amazon EC2"
+            >
           </a>
         </div>
         <div class="">
@@ -358,7 +425,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/line.svg"
-              alt="LINE">
+              alt="LINE"
+            >
           </a>
         </div>
         <div class="">
@@ -371,7 +439,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/visual-studio-code.svg"
-              alt="Visual Studio Code">
+              alt="Visual Studio Code"
+            >
           </a>
         </div>
         <div class="">
@@ -384,7 +453,8 @@
             <img 
               class="bland-logo"
               src="/img/logo/atom-editor.svg"
-              alt="Atom">
+              alt="Atom"
+            >
           </a>
         </div>
       </div>
