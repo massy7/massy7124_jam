@@ -30,7 +30,7 @@
 
               <h2 class="headline font-weight-light mb-3 color-databeat">
                 <a
-                  href="https://www.data-be.at/about/"
+                  href="https://www.agito-inc.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="color-databeat"
