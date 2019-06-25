@@ -495,7 +495,8 @@ export default {
   },
   head() {
     return {
-      title: "Massy's Home"
+      titleTemplate: null,
+      title: 'Massy7124'
     }
   }
 }

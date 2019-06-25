@@ -237,11 +237,24 @@
 </template>
 
 <script>
-import ChipTechnology from '~/components/ChipTechnology.vue'
+import ChipTechnology from '~/components/ChipTechnology'
+import Meta from '~/assets/mixins/meta'
 
 export default {
   components: {
     ChipTechnology
+  },
+  mixins: [Meta],
+  data() {
+    return {
+      meta: {
+        title: 'History',
+        description: '経歴',
+        type: 'profile',
+        url: 'https://massy7124.me/history',
+        image: 'http://massy7124.me/img/massy7124.jpg'
+      }
+    }
   },
   mounted() {
     window.onkeydown = e => {
@@ -264,11 +277,6 @@ export default {
     return from.name !== 'index' && from.name !== 'works'
       ? 'slide-right'
       : 'slide-left'
-  },
-  head() {
-    return {
-      title: 'History'
-    }
   }
 }
 </script>

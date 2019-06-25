@@ -178,10 +178,23 @@
 
 <script>
 import ChipTechnology from '~/components/ChipTechnology.vue'
+import Meta from '~/assets/mixins/meta'
 
 export default {
   components: {
     ChipTechnology
+  },
+  mixins: [Meta],
+  data() {
+    return {
+      meta: {
+        title: 'Works',
+        description: '作ったもの',
+        type: 'product',
+        url: 'https://massy7124.me/works',
+        image: 'http://massy7124.me/img/massy7124.jpg'
+      }
+    }
   },
   mounted() {
     window.onkeydown = e => {
@@ -202,11 +215,6 @@ export default {
   transition(to, from) {
     if (!from) return 'slide-left'
     return from.name === 'index' ? 'slide-left' : 'slide-right'
-  },
-  head() {
-    return {
-      title: 'Works'
-    }
   }
 }
 </script>

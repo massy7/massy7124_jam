@@ -126,7 +126,21 @@
 </template>
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 export default {
+  mixins: [Meta],
+  data() {
+    return {
+      meta: {
+        title: 'Contact',
+        description: 'お問い合わせ',
+        type: 'profile',
+        url: 'https://massy7124.me/contact',
+        image: 'http://massy7124.me/img/massy7124.jpg'
+      }
+    }
+  },
   mounted() {
     window.onkeydown = e => {
       if (e.keyCode == 37) {
@@ -159,11 +173,6 @@ export default {
   transition(to, from) {
     if (!from) return 'slide-left'
     return 'slide-left'
-  },
-  head() {
-    return {
-      title: 'Contact'
-    }
   }
 }
 </script>

@@ -71,6 +71,7 @@ import BlogCardMini from '~/components/BlogCardMini.vue'
 import ChipTechnology from '~/components/ChipTechnology.vue'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import hljs from 'highlight.js'
+import Meta from '~/assets/mixins/meta'
 
 const config = require('../../config/production.json')
 
@@ -79,6 +80,7 @@ export default {
     BlogCardMini,
     ChipTechnology
   },
+  mixins: [Meta],
   async asyncData({ store, route }) {
     if (!store.state.blogs.blogs.length) {
       await store.dispatch('blogs/fetchBlogs')
@@ -108,7 +110,14 @@ export default {
       blogs: filteredBlogs,
       blogData: blogData,
       prevId: prevId,
-      nextId: nextId
+      nextId: nextId,
+      meta: {
+        title: blogData.title,
+        description: blogData.description,
+        type: 'article',
+        url: `https://massy7124.me${route.fullPath}`,
+        image: `https://${blogData.image.fields.file.url}`
+      }
     }
   },
   mounted() {
@@ -146,7 +155,6 @@ export default {
         .replace(/&amp;/g, '&')
         .replace(/<p><iframe/g, '<div class="iframe-wrapper"><iframe')
         .replace(/<\/iframe><\/p>/g, '</iframe></div>')
-      console.log(htmlString)
 
       return htmlString
     }
@@ -156,29 +164,6 @@ export default {
     else if (from.name === 'blog') return 'slide-up'
     else if (to.name.includes('blog-id')) return 'page'
     else return from.name === 'contact' ? 'slide-right' : 'slide-left'
-  },
-  head() {
-    if (!!this.blogData === false) {
-      return {
-        title: 'Blog'
-      }
-    }
-
-    const title = this.blogData.title
-    const description = this.blogData.description || null
-
-    if (description !== null) {
-      return {
-        title: title,
-        meta: [
-          { hid: 'description', name: 'description', content: description }
-        ]
-      }
-    } else {
-      return {
-        title: title
-      }
-    }
   }
 }
 </script>

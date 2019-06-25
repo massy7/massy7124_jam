@@ -10,13 +10,14 @@ const ctfConfig = getConfigForKeys([
 const cdaClient = createClient(ctfConfig)
 
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
 
   /*
   ** Headers of the page
   */
   head: {
-    title: "Massy7124's Web Site",
+    htmlAttrs: { prefix: 'og: http://ogp.me/ns#' },
+    titleTemplate: '%s - Massy7124',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -34,9 +35,13 @@ module.exports = {
       },
       { name: 'twitter:image:src', content: '' },
       { property: 'og:url', content: config.server.baseUrl },
-      { property: 'og:title', content: "massy7124's site" },
+      { property: 'og:title', content: 'Massy7124' },
+      { property: 'og:site_name', content: 'Massy7124' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:description', content: "massy7124's portfolio site" },
+      {
+        property: 'og:description',
+        content: 'Massy7124のポートフォリオサイトです。'
+      },
       {
         property: 'og:image',
         content: 'http://massy7124.me/img/massy7124.jpg'

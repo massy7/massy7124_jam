@@ -39,10 +39,23 @@
 
 <script>
 import BlogCard from '~/components/BlogCard.vue'
+import Meta from '~/assets/mixins/meta'
 
 export default {
   components: {
     BlogCard
+  },
+  mixins: [Meta],
+  data() {
+    return {
+      meta: {
+        title: 'Blogs',
+        description: 'ブログ',
+        type: 'article',
+        url: 'https://massy7124.me/blog',
+        image: 'http://massy7124.me/img/massy7124.jpg'
+      }
+    }
   },
   async asyncData({ store }) {
     if (store.state.blogs.blogs.length) {
@@ -76,11 +89,6 @@ export default {
     else if (from.name.includes('blog-id')) return 'slide-down'
     else if (to.name.includes('blog-id')) return 'slide-up'
     else return from.name !== 'contact' ? 'slide-left' : 'slide-right'
-  },
-  head() {
-    return {
-      title: 'Blog'
-    }
   }
 }
 </script>
