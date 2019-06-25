@@ -24,29 +24,25 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'Massy7124のポートフォリオサイトです。ブログも書いていますのでご覧ください！'
-      },
-      { name: 'twitter:site', content: 'summary' },
-      { name: 'twitter:card', content: '@massy7124' },
-      {
-        name: 'twitter:description',
         content: 'Massy7124のポートフォリオサイトです。'
       },
-      { name: 'twitter:image:src', content: '' },
-      { property: 'og:url', content: config.server.baseUrl },
-      { property: 'og:title', content: 'Massy7124' },
-      { property: 'og:site_name', content: 'Massy7124' },
-      { property: 'og:type', content: 'website' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@massy7124' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+      { hid: 'og:url', property: 'og:url', content: config.server.baseUrl },
+      { hid: 'og:title', property: 'og:title', content: 'Massy7124' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Massy7124' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
       {
+        hid: 'og:description',
         property: 'og:description',
         content: 'Massy7124のポートフォリオサイトです。'
       },
       {
+        hid: 'og:image',
         property: 'og:image',
         content: 'http://massy7124.me/img/massy7124.jpg'
       },
-      { property: 'fb:admins', content: '100010745989607' }
+      { hid: 'fb:admins', property: 'fb:admins', content: '100010745989607' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
