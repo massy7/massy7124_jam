@@ -12,7 +12,7 @@
           v-for="(blog, index) in blogs"
           :key="blog.id"
           :data-index="index"
-          :offset-sm3="blogs.length % 2 == 1 && (blogs.length - 1) == index"
+          :offset-sm3="blogs.length % 2 == 1 && (blogs.length - 1) == index && $vuetify.breakpoint.smOnly"
           :offset-lg2="blogs.length % 3 == 2 && (blogs.length - 2) == index"
           :offset-lg4="blogs.length % 3 == 1 && (blogs.length - 1) == index"
           :class="{ 'pl-0 pr-0': $vuetify.breakpoint.xsOnly }"
