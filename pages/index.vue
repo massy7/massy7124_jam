@@ -9,12 +9,12 @@
         <div class="profile-image center-margin">
           <img 
             class="icon-profile"
-            src="/img/massy7124.jpg"
+            src="/img/massy7124.png"
             alt="massy7124"
           >
         </div>
 
-        <div class="name center">
+        <div class="name">
           Koki Mashiko
         </div>
 
@@ -507,10 +507,10 @@ export default {
   max-width 960px
 
 .grid-profile
-  grid-template-rows 48px 1fr 1fr
+  grid-template-rows 48px 120px 48px
   grid-template-columns 1fr 3fr
   grid-template-areas \
-    'name name' \
+    'profile-image name' \
     'profile-image detail' \
     'profile-image love-hate' \
 
@@ -530,7 +530,7 @@ export default {
 
 @media (max-width 767px)
   .grid-profile
-    grid-template-rows 120px 40px 1fr 40px
+    grid-template-rows 200px 40px 1fr 40px
     grid-template-columns 1fr
     grid-template-areas \
       'profile-image' \
@@ -539,5 +539,5 @@ export default {
       'love-hate'
 
   .profile-image
-    max-width 120px
+    max-width 200px
 </style>

@@ -13,13 +13,13 @@
           :key="blog.id"
           :data-index="index"
           :offset-sm3="blogs.length % 2 == 1 && (blogs.length - 1) == index && $vuetify.breakpoint.smOnly"
-          :offset-lg2="blogs.length % 3 == 2 && (blogs.length - 2) == index"
-          :offset-lg4="blogs.length % 3 == 1 && (blogs.length - 1) == index"
+          :offset-md2="blogs.length % 3 == 2 && (blogs.length - 2) == index"
+          :offset-md4="blogs.length % 3 == 1 && (blogs.length - 1) == index"
           :class="{ 'pl-0 pr-0': $vuetify.breakpoint.xsOnly }"
           class="padding-16"
           xs12
           sm6
-          lg4
+          md4
         >
           <nuxt-link :to="{ name: 'blog-id', params: { id: blog.id }}">
             <blog-card
