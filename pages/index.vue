@@ -200,8 +200,23 @@
           >
             <img 
               class="bland-logo"
+              style="padding-top: 8px;"
               src="/img/logo/es6.svg"
               alt="ES6"
+            >
+          </a>
+        </div>
+        <div class="">
+          <a 
+            href="https://www.typescriptlang.org/"
+            title="TypeScript"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              class="bland-logo"
+              src="/img/logo/typescript.svg"
+              alt="TypeScript"
             >
           </a>
         </div>
