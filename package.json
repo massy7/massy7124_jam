@@ -23,7 +23,7 @@
     "contentful": "^7.5.1",
     "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
-    "highlight.js": "^9.15.6",
+    "highlight.js": "^10.4.1",
     "nuxt": "^2.0.0",
     "vue-markdown": "^2.2.4",
     "vue-scrollto": "^2.15.0",
